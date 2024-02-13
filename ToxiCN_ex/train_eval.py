@@ -76,6 +76,18 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
             # print("training loss: loss={}".format(loss_all/len(data)))
             trn_scores = get_scores(preds, labels, loss_all, len(train_iter), data_name="TRAIN")
             dev_scores, _ = eval(config, embed_model, model, loss_fn, dev_iter, data_name='DEV')
+            file_path = f'{}/{}.all_scores.txt'.format(config.result_path, model_name)'
+            try:
+                # Try to open the file in read mode to check if it exists
+                with open(file_path, 'r') as file:
+                    # If this succeeds, the file exists
+                    file_exists = True
+            except FileNotFoundError:
+                # If a FileNotFoundError is raised, the file does not exist, so we create it
+                with open(file_path, 'w') as file:
+                    # Write something to the file or leave it empty
+                    file.write("This is a newly created file because it did not exist.")
+
             f = open('{}/{}.all_scores.txt'.format(config.result_path, model_name), 'a')
             f.write(' ==================================================  Epoch: {}  ==================================================\n'.format(epoch))
             f.write('TrainScore: \n{}\nEvalScore: \n{}\n'.format(json.dumps(trn_scores), json.dumps(dev_scores))) 
