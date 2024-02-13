@@ -85,6 +85,7 @@ if __name__ == '__main__':
         print('The size of the Training dataset: {}'.format(len(trn_data)))
         print('The size of the Validation dataset: {}'.format(len(dev_data)))
         print('The size of the Test dataset: {}'.format(len(test_data)))
+
     train_iter = Dataloader(trn_data,  batch_size=int(config.batch_size), SEED=config.seed)
     dev_iter = Dataloader(dev_data,  batch_size=int(config.batch_size), shuffle=False)
     test_iter = Dataloader(test_data,  batch_size=int(config.batch_size), shuffle=False)
