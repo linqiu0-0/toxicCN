@@ -160,4 +160,6 @@ cython_debug/
 #.idea/
 
 #checkpoint data
-ToxiCN/saved_dict/*
+ToxiCN_ex/ToxiCN/saved_dict/*
+dolphin/api_key.txt
+.DS_Store
