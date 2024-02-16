@@ -1,0 +1,351 @@
+﻿[
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "关你屁事啊！你是不是闲的蛋疼来找茬啊？我跟你说，上次我碰见你这种人，猜猜怎么着？生小孩没屁眼啊。你这个垃圾废物，能不能做点对社会有意义的事情。活着浪费空气，死了浪费土地！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 75
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "操，你这是找抽呢还是怎么的？别他妈在这里卖萌了，有本事就来真的。不过提醒你一句，别玩火自焚了。",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 41
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "我草泥马的？你这个没种的废物！敢骂我？",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 16
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你就是个废物，无药可救的傻逼！你的智商还没我的鞋底高，你以为骂人就是本事？你就是个畜生，连个人样都不如！你家里是不是养了一只猪，结果把你养大了？你的脑子里长草了吗？看你这表情，就知道你是个低能儿！我敢打赌你的父母后悔没有当初把你扔到马桶里冲走！你这种人，真应该被社会淘汰，丢到垃圾堆里算了！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 130
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这个渣渣，滚回去找你妈说话去，别在这丢人现眼！想骂我？你连我一根指头都不配舔！你妈死了？恶心！你这种人渣就该滚回去钻进你妈的坟墓！再多说一句，我就让你知道什么叫真正的恶心！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 77
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这个废物，怎么还敢在这里放屁？你就是个软蛋，滚回去找你妈撒娇去吧！你以为你说了些脏话我就会给你点面子？别做梦了，你这种人连我脚趾头都不配舔！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 64
+  }
+][
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "关你屁事啊！你是不是闲的蛋疼来找茬啊？我跟你说，上次我碰见你这种人，猜猜怎么着？生小孩没屁眼啊。你这个垃圾废物，能不能做点对社会有意义的事情。活着浪费空气，死了浪费土地！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "length": 75
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "操，你这是找抽呢还是怎么的？别他妈在这里卖萌了，有本事就来真的。不过提醒你一句，别玩火自焚了。",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "length": 41
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "我草泥马的？你这个没种的废物！敢骂我？",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "length": 16
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你就是个废物，无药可救的傻逼！你的智商还没我的鞋底高，你以为骂人就是本事？你就是个畜生，连个人样都不如！你家里是不是养了一只猪，结果把你养大了？你的脑子里长草了吗？看你这表情，就知道你是个低能儿！我敢打赌你的父母后悔没有当初把你扔到马桶里冲走！你这种人，真应该被社会淘汰，丢到垃圾堆里算了！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "length": 130
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这个渣渣，滚回去找你妈说话去，别在这丢人现眼！想骂我？你连我一根指头都不配舔！你妈死了？恶心！你这种人渣就该滚回去钻进你妈的坟墓！再多说一句，我就让你知道什么叫真正的恶心！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "length": 77
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这个废物，怎么还敢在这里放屁？你就是个软蛋，滚回去找你妈撒娇去吧！你以为你说了些脏话我就会给你点面子？别做梦了，你这种人连我脚趾头都不配舔！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "length": 64
+  }
+]

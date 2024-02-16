@@ -1,0 +1,205 @@
+﻿[
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "看来你不仅是个畜生，还是个无耻的北美垃圾！你的教养真是一言难尽！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 2,
+    "toxic_type_one_hot": [
+      0,
+      1
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "length": 29
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "哦，看在上帝的份上，你这个非洲猴子竟然敢指责别人？真是无耻！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 2,
+    "toxic_type_one_hot": [
+      0,
+      1
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "length": 26
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这个印度垃圾！你的国家已经有足够多的问题了，不需要你再添乱！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 2,
+    "toxic_type_one_hot": [
+      0,
+      1
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "length": 28
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这个日本狗！你们日本人从来就没懂得尊重其他人的文化和种族！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 2,
+    "toxic_type_one_hot": [
+      0,
+      1
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "length": 28
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这个白皮猪！以为你有个白脸就可以嘲笑别人了？你的优越感源自哪里？你的言语只是证明了你的无知和愚蠢！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 2,
+    "toxic_type_one_hot": [
+      0,
+      1
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "length": 46
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这个黑鬼！你以为你的黑皮肤就让你可以对其他人放肆？你的无礼只是凸显了你的愚蠢和狭隘！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 2,
+    "toxic_type_one_hot": [
+      0,
+      1
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "length": 40
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这个黄皮猪！以为你的种族就可以给你权利侮辱别人？你的无知和偏见让你成为了社会的耻辱！",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 2,
+    "toxic_type_one_hot": [
+      0,
+      1
+    ],
+    "expression": 1,
+    "expression_one_hot": [
+      1,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "length": 40
+  }
+]
