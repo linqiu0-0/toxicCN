@@ -51,7 +51,7 @@ class Config_base(object):
         self.scheduler = False                                          # 是否学习率衰减
         self.adversarial = False  # 是否对抗训练
         self.num_warm = 0                                               # 开始验证的epoch数
-        self.num_epochs = 2                                            # epoch数 
+        self.num_epochs = 5                                            # epoch数 
         self.batch_size = 32                                           # mini-batch大小
 
         # loss
