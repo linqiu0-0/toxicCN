@@ -47,7 +47,7 @@ class Config_base(object):
 
         # train
         self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')   # 设备
-        self.learning_rate = 2e-5                                       # 学习率  transformer:5e-4 
+        self.learning_rate = 3e-5                                       # 学习率  transformer:5e-4 
         self.scheduler = False                                          # 是否学习率衰减
         self.adversarial = False  # 是否对抗训练
         self.num_warm = 0                                               # 开始验证的epoch数
