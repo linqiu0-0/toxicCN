@@ -92,9 +92,9 @@ if __name__ == '__main__':
         last_item_str = str(trn_data[-1])
             
         # Check if the length of the string representation is more than 400 characters
-        if len(last_item_str) > 400:
+        if len(last_item_str) > 2000:
             # Print the last 400 characters
-            print(last_item_str[-400:])
+            print(last_item_str[-2000:])
         else:
             # If the item is shorter than 400 characters, print it whole
             print(last_item_str)
