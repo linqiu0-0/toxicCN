@@ -67,7 +67,7 @@ if __name__ == '__main__':
 
     x = import_module('model.' + "Config_base")
     config = x.Config_base(model_name, dataset)  # 引入Config参数，包括Config_base和各私有Config
-    os.remove(config.data_path)
+    os.remove(config.data_path)   # 加了
 
     if not os.path.exists(config.data_path): 
         trn_data = Datasets(config, config.train_path)
@@ -104,6 +104,7 @@ if __name__ == '__main__':
 
     train_iter = Dataloader(trn_data,  batch_size=int(config.batch_size), SEED=config.seed)
     dev_iter = Dataloader(dev_data,  batch_size=int(config.batch_size), shuffle=False)
+    print("dev iter:",dev_iter)
     test_iter = Dataloader(test_data,  batch_size=int(config.batch_size), shuffle=False)
 
     time_dif = get_time_dif(start_time)
