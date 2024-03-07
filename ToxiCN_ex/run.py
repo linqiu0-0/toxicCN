@@ -105,6 +105,28 @@ if __name__ == '__main__':
     train_iter = Dataloader(trn_data,  batch_size=int(config.batch_size), SEED=config.seed)
     dev_iter = Dataloader(dev_data,  batch_size=int(config.batch_size), shuffle=False)
     print("dev iter:",dev_iter)
+    # Print the batch size used for dev_iter
+    print("Batch size for dev_iter:", config.batch_size)
+
+    # Try to print the size of the dev_data, if it's directly accessible
+    if hasattr(dev_iter, 'dataset') and hasattr(dev_iter.dataset, '__len__'):
+        print("Size of dev_data:", len(dev_iter.dataset))
+    else:
+        print("dev_data size is not directly accessible.")
+
+    # Print the calculated length of dev_iter (number of batches)
+    if hasattr(dev_iter, '__len__'):
+        print("Number of batches in dev_iter:", len(dev_iter))
+    else:
+        print("dev_iter does not implement __len__ method.")
+
+    # Additional attributes you might want to print to debug
+    if hasattr(dev_iter, 'shuffle'):
+        print("Shuffling in dev_iter:", dev_iter.shuffle)
+
+    if hasattr(dev_iter, 'SEED'):
+        print("Seed used in dev_iter:", dev_iter.SEED)
+
     test_iter = Dataloader(test_data,  batch_size=int(config.batch_size), shuffle=False)
 
     time_dif = get_time_dif(start_time)
