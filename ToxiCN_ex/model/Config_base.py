@@ -53,7 +53,7 @@ class Config_base(object):
         self.num_warm = 0                                               # 开始验证的epoch数
         self.num_epochs = 5                                            # epoch数 
         self.batch_size = 32                                           # mini-batch大小
-        self.weight_decay = 1e-3
+        self.weight_decay = 1e-2
 
         # loss
         self.alpha1 = 0.5
