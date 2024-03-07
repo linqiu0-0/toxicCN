@@ -83,7 +83,6 @@ if __name__ == '__main__':
         dev_data = checkpoint['dev_data']
         test_data = checkpoint['test_data']
         print('The size of the Training dataset: {}'.format(len(trn_data)))
-        print(trn_data[-200:])
         print('The size of the Validation dataset: {}'.format(len(dev_data)))
         print('The size of the Test dataset: {}'.format(len(test_data)))
 
