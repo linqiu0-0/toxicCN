@@ -79,12 +79,25 @@ if __name__ == '__main__':
             }, config.data_path)
     else:
         checkpoint = torch.load(config.data_path)
+        print("congif.datapath:", config.train_path)
         trn_data = checkpoint['trn_data']
         dev_data = checkpoint['dev_data']
         test_data = checkpoint['test_data']
         print('The size of the Training dataset: {}'.format(len(trn_data)))
         print('The size of the Validation dataset: {}'.format(len(dev_data)))
         print('The size of the Test dataset: {}'.format(len(test_data)))
+        
+    if 'trn_data' in locals():
+        # Convert the last item of the training data to a string
+        last_item_str = str(trn_data[-1])
+            
+        # Check if the length of the string representation is more than 400 characters
+        if len(last_item_str) > 400:
+            # Print the last 400 characters
+            print(last_item_str[-400:])
+        else:
+            # If the item is shorter than 400 characters, print it whole
+            print(last_item_str)
 
     train_iter = Dataloader(trn_data,  batch_size=int(config.batch_size), SEED=config.seed)
     dev_iter = Dataloader(dev_data,  batch_size=int(config.batch_size), shuffle=False)
