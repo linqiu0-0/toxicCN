@@ -67,6 +67,7 @@ if __name__ == '__main__':
 
     x = import_module('model.' + "Config_base")
     config = x.Config_base(model_name, dataset)  # 引入Config参数，包括Config_base和各私有Config
+    os.remove(config.data_path)
 
     if not os.path.exists(config.data_path): 
         trn_data = Datasets(config, config.train_path)
