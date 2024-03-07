@@ -79,10 +79,12 @@ if __name__ == '__main__':
             }, config.data_path)
     else:
         checkpoint = torch.load(config.data_path)
-        print("congif.datapath:", config.train_path)
         trn_data = checkpoint['trn_data']
         dev_data = checkpoint['dev_data']
         test_data = checkpoint['test_data']
+        print("config.datapath:", config.train_path)
+        print("config.devpath:", config.dev_path)
+        print("config.testpath:", config.test_path)
         print('The size of the Training dataset: {}'.format(len(trn_data)))
         print('The size of the Validation dataset: {}'.format(len(dev_data)))
         print('The size of the Test dataset: {}'.format(len(test_data)))
