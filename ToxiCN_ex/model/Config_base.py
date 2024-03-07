@@ -16,10 +16,10 @@ class Config_base(object):
     def __init__(self, model_name, dataset):
         # path
         self.model_name = model_name
-        # self.train_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/data/train_with_syn.json'     # 改了                           # 训练集
-        self.train_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/data/train_original.json'     # 改了                           # 训练集
-        self.dev_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/data/syn-all.json'                  # 改了                  # 验证集
-        self.test_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/data/syn-all.json'                                  # 测试集
+        self.train_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/data/train_with_syn.json'     # 改了                           # 训练集
+        # self.train_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/data/train_original.json'     # 改了                           # 训练集
+        self.dev_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/data/test.json'                  # 改了                  # 验证集
+        self.test_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/data/test.json'                                  # 测试集
 
         self.vocab_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/data/vocab.pkl' 
         self.lexicon_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/lexicon/'        # 数据集、模型训练结果                               # 词表
