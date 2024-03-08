@@ -26,8 +26,8 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
     model_name = '{}-NN_ML-{}_D-{}_B-{}_E-{}_Lr-{}_aplha-{}'.format(config.model_name, config.pad_size, config.dropout, 
                                             config.batch_size, config.num_epochs, config.learning_rate, config.alpha1)
     embed_optimizer = optim.AdamW(embed_model.parameters(), lr=config.learning_rate)
-    model_optimizer = optim.AdamW(model.parameters(), lr=config.learning_rate, weight_decay=config.weight_decay)
-    # model_optimizer = optim.Adamax(model.parameters(), lr=config.learning_rate)
+    # model_optimizer = optim.AdamW(model.parameters(), lr=config.learning_rate, weight_decay=config.weight_decay)
+    model_optimizer = optim.Adamax(model.parameters(), lr=config.learning_rate)
     # fgm = FGM(embed_model, epsilon=1, emb_name='word_embeddings.')
     loss_fn = nn.BCEWithLogitsLoss()
     # loss_fn = get_loss_func("FL", [0.4, 0.6], config.num_classes, config.alpha1)
