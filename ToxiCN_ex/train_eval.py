@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from sklearn import metrics
 from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_score
 
@@ -26,12 +27,16 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
     model_name = '{}-NN_ML-{}_D-{}_B-{}_E-{}_Lr-{}_aplha-{}'.format(config.model_name, config.pad_size, config.dropout, 
                                             config.batch_size, config.num_epochs, config.learning_rate, config.alpha1)
     embed_optimizer = optim.AdamW(embed_model.parameters(), lr=config.learning_rate)
-    # model_optimizer = optim.AdamW(model.parameters(), lr=config.learning_rate, weight_decay=config.weight_decay)
-    model_optimizer = optim.Adamax(model.parameters(), lr=config.learning_rate)
+    model_optimizer = optim.AdamW(model.parameters(), lr=config.learning_rate, weight_decay=config.weight_decay)
+    # model_optimizer = optim.Adamax(model.parameters(), lr=config.learning_rate)
     # fgm = FGM(embed_model, epsilon=1, emb_name='word_embeddings.')
     loss_fn = nn.BCEWithLogitsLoss()
     # loss_fn = get_loss_func("FL", [0.4, 0.6], config.num_classes, config.alpha1)
     max_score = 0
+
+    # Lists to store gradients during training
+    embed_gradients = []
+    model_gradients = []
 
     for epoch in range(config.num_epochs):
         embed_model.train()
@@ -60,6 +65,10 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
             # pred = get_preds_task3(config, logit)  
             preds.extend(pred)
             labels.extend(label.detach().numpy())
+
+            # Get gradients for both embed_model and model
+            embed_gradients.extend([param.grad.data.cpu().numpy().flatten() for param in embed_model.parameters() if param.grad is not None])
+            model_gradients.extend([param.grad.data.cpu().numpy().flatten() for param in model.parameters() if param.grad is not None])
 
             loss_all += loss.item()
             embed_optimizer.zero_grad()
@@ -103,6 +112,10 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
     f.write('Test: \n{}\n'.format(json.dumps(test_scores)))
     # f = open('{}/{}.all_scores.txt'.format(config.result_path, model_name), 'a')
     # f.write('Test: \n{}\n'.format(json.dumps(test_scores)))
+
+    # Plot histograms of gradients
+    plot_gradients_histogram(embed_gradients, "Embed Model Gradients")
+    plot_gradients_histogram(model_gradients, "Model Gradients")
 
 
 def eval(config, embed_model, model, loss_fn, dev_iter, data_name='DEV'):
@@ -217,3 +230,13 @@ def save_best(config, epoch, model_name, embed_model, model, score, max_score):
         return curr_score
     else:
         return max_score
+    
+
+
+def plot_gradients_histogram(gradients, title):
+    plt.figure(figsize=(10, 6))
+    plt.hist(gradients, bins=50, color='blue', alpha=0.7)
+    plt.title(title)
+    plt.xlabel('Gradient Values')
+    plt.ylabel('Frequency')
+    plt.show()
