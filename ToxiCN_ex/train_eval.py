@@ -113,7 +113,7 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
 
     plot_path = '{}/{}.model_gradients.png'.format(config.result_path, model_name)
     # Plot histograms of gradients
-    plot_gradients_histogram(model_gradients, "Model Gradients", plot_path)
+    # plot_gradients_histogram(model_gradients, "Model Gradients", plot_path)
 
 
 def eval(config, embed_model, model, loss_fn, dev_iter, data_name='DEV'):
