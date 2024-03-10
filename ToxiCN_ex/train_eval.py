@@ -35,7 +35,6 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
     max_score = 0
 
     # Lists to store gradients during training
-    embed_gradients = []
     model_gradients = []
 
     for epoch in range(config.num_epochs):
@@ -67,7 +66,6 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
             labels.extend(label.detach().numpy())
 
             # Get gradients for both embed_model and model
-            embed_gradients.extend([param.grad.data.cpu().numpy().flatten() for param in embed_model.parameters() if param.grad is not None])
             model_gradients.extend([param.grad.data.cpu().numpy().flatten() for param in model.parameters() if param.grad is not None])
 
             loss_all += loss.item()
@@ -113,9 +111,9 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
     # f = open('{}/{}.all_scores.txt'.format(config.result_path, model_name), 'a')
     # f.write('Test: \n{}\n'.format(json.dumps(test_scores)))
 
+    plot_path = '{}/{}.model_gradients.png'.format(config.result_path, model_name)
     # Plot histograms of gradients
-    plot_gradients_histogram(embed_gradients, "Embed Model Gradients")
-    plot_gradients_histogram(model_gradients, "Model Gradients")
+    plot_gradients_histogram(model_gradients, "Model Gradients", plot_path)
 
 
 def eval(config, embed_model, model, loss_fn, dev_iter, data_name='DEV'):
@@ -233,10 +231,11 @@ def save_best(config, epoch, model_name, embed_model, model, score, max_score):
     
 
 
-def plot_gradients_histogram(gradients, title):
+def plot_gradients_histogram(gradients, title, file_path):
     plt.figure(figsize=(10, 6))
     plt.hist(gradients, bins=50, color='blue', alpha=0.7)
     plt.title(title)
     plt.xlabel('Gradient Values')
     plt.ylabel('Frequency')
-    plt.show()
+    plt.savefig(file_path)
+    plt.close()
