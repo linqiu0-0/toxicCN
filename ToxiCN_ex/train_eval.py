@@ -22,7 +22,9 @@ import os
 
 def train(config, train_iter, dev_iter, test_iter, task=1):
     embed_model = Bert_Layer(config).to(config.device)
-    model = TwoLayerFFNNLayer(config).to(config.device)
+    # model = TwoLayerFFNNLayer(config).to(config.device)
+    model = ThreeLayerFFNNLayer(config).to(config.device)
+
     model_name = '{}-NN_ML-{}_D-{}_B-{}_E-{}_Lr-{}_aplha-{}'.format(config.model_name, config.pad_size, config.dropout, 
                                             config.batch_size, config.num_epochs, config.learning_rate, config.alpha1)
     embed_optimizer = optim.AdamW(embed_model.parameters(), lr=config.learning_rate)
@@ -94,8 +96,14 @@ def train(config, train_iter, dev_iter, test_iter, task=1):
     embed_model.load_state_dict(checkpoint['embed_model_state_dict'])
     model.load_state_dict(checkpoint['model_state_dict'])
     test_scores, _ = eval(config, embed_model, model, loss_fn, test_iter, data_name='DEV')
-    f = open('{}/{}.all_scores.txt'.format(config.result_path, model_name), 'a')
+
+    file_path = '{}/{}.all_scores.txt'.format(config.result_path, model_name)
+    if not os.path.isfile(file_path):
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    f = open(file_path, 'a')
     f.write('Test: \n{}\n'.format(json.dumps(test_scores)))
+    # f = open('{}/{}.all_scores.txt'.format(config.result_path, model_name), 'a')
+    # f.write('Test: \n{}\n'.format(json.dumps(test_scores)))
 
 
 def eval(config, embed_model, model, loss_fn, dev_iter, data_name='DEV'):

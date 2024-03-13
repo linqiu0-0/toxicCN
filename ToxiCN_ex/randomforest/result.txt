@@ -1,0 +1,16 @@
+Some weights of BertModel were not initialized from the model checkpoint at hfl/chinese-roberta-wwm-ext and are newly initialized: ['bert.embeddings.toxic_embeddings.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/root/toxicCN/ToxiCN_ex
+Loading data...
+The size of the Training dataset: 9600
+The size of the Validation dataset: 2411
+The size of the Test dataset: 2411
+Loading encoded datasets...
+Size of encoded Training dataset: 9600
+Size of encoded Validation dataset: 2411
+Size of encoded Test dataset: 2411
+(9600, 768) (9600,)
+Test Accuracy: 0.7039
+Test F1 Score: 0.6645
+Test Precision: 0.7134
+Test Recall: 0.6218

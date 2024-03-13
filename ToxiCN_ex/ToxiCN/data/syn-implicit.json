@@ -1,0 +1,205 @@
+﻿[
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这种人就像是路边被人遗忘的口香糖，粘粘糊糊，谁碰谁恶心。还有啊，你的智商明显是负载运转，能让人瞬间感受到什么叫做绝望的深渊。",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 57
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这人啊，就像是个无底洞，不管塞进去多少智慧和常识，都瞬间消失得无影无踪，真是个天生的智商黑洞。你的存在证明了，不是所有的人类都进化完全，至少有你这么一个活生生的反例。你的脑袋里面除了水，我真是难以想象还能装下什么，难道是空气填充物吗？",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 107
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "简直就是人类智慧的负资产，走到哪儿都能让人觉得IQ直线下降。你的存在，简直是对这个世界的一种挑战，挑战人们能忍受多少蠢。要是蠢能发电的话，你估计能独自供应一个城市的电力需求了。",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 79
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这人，就像是个人形的逆光，哪儿都不照，只会让人感到一片黑暗。你的智商，如果放在古代，绝对是个活宝，能让人深刻理解什么叫“天然呆”。你的脸，我猜在某些文明里肯定是用来驱邪的，因为没人能看你一眼不觉得浑身不自在。",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 92
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你这外表啊，简直就是大自然的杰作，让人不得不赞叹大自然的惊人想象力——怎么能创造出你这样独一无二的生物呢？每次看到你，我都在想，是不是所有的镜子在你面前都会自动打破，以免记录下这惊世骇俗的一幕。你的穿着品味呢，应该能开创一个叫做“灾难现场”的时尚风格，每次出门都能引起路人的密切关注——不是因为佩服，是因为担心。",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 139
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你的外表啊，简直就是现代艺术的巅峰之作，每一处细节都在大声疾呼：“看看，这就是反美学的极致！”你走在街上，能让所有的时尚杂志都为自己存在的意义深感迷茫——因为在你面前，所有的潮流和风尚都显得如此无力。",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 88
+  },
+  {
+    "platform": "pizizanghuabot",
+    "topic": "others",
+    "content": "你的五官组合，我猜是上天特意为了增加人类多样性而精心设计的，确实，世界因你而更加丰富多彩。每次你一出现，都能让周围的人深刻体会到什么叫做“外貌协会”的绝望。",
+    "toxic": 1,
+    "toxic_one_hot": [
+      0,
+      1
+    ],
+    "toxic_type": 1,
+    "toxic_type_one_hot": [
+      1,
+      0
+    ],
+    "expression": 2,
+    "expression_one_hot": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "length": 70
+  }
+]

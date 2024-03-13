@@ -161,5 +161,9 @@ cython_debug/
 
 #checkpoint data
 ToxiCN_ex/ToxiCN/saved_dict/*
+ToxiCN_ex/temp.txt
 dolphin/api_key.txt
 .DS_Store
+ToxiCN_ex/ToxiCN/result/*
+ToxiCN_ex/xgboost/xgb_model.model
+temp.txt

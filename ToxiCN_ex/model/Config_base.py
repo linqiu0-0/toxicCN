@@ -25,6 +25,8 @@ class Config_base(object):
         self.result_path = path.dirname(path.dirname(__file__))+'/' + dataset + '/result'
         self.checkpoint_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/saved_dict'        # 数据集、模型训练结果
         self.data_path = self.checkpoint_path + '/data.tar'
+        self.save_path = self.checkpoint_path
+
         # self.log_path = path.dirname(path.dirname(__file__))+'/'+ dataset + '/log/' + self.model_name
         # self.embedding_pretrained = torch.tensor(
         #     np.load(path.dirname(path.dirname(__file__))+'/'+ 'THUCNews' + '/data/' + embedding)["embeddings"].astype('float32'))\

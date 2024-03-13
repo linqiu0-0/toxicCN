@@ -67,3 +67,31 @@ class TwoLayerFFNNLayer(torch.nn.Module):
         att_input = self.dropout(att_input)
         pooled_emb = self.dropout(pooled_emb)
         return self.model(pooled_emb)
+
+
+class ThreeLayerFFNNLayer(nn.Module):
+    '''
+    3-layer FFNN with specified nonlinear function
+    must be followed with some kind of prediction layer for actual prediction
+    '''
+    def __init__(self, config):
+        super(ThreeLayerFFNNLayer, self).__init__()
+        self.input_dim = config.vocab_dim  # Input dimension
+        self.hidden_dim1 = config.fc_hidden_dim  # Dimension of the first hidden layer
+        self.hidden_dim2 = config.fc_hidden_dim  # Dimension of the second hidden layer
+        self.out_dim = config.num_classes  # Output dimension
+        self.dropout = nn.Dropout(config.dropout)  # Dropout layer
+        
+        # Define the model architecture
+        self.model = nn.Sequential(
+            nn.Linear(self.input_dim, self.hidden_dim1),
+            nn.ReLU(),  # First non-linear activation function
+            nn.Linear(self.hidden_dim1, self.hidden_dim2),
+            nn.ReLU(),  # Second non-linear activation function
+            nn.Linear(self.hidden_dim2, self.out_dim)  # Output layer
+        )
+
+    def forward(self, att_input, pooled_emb):
+        att_input = self.dropout(att_input)
+        pooled_emb = self.dropout(pooled_emb)
+        return self.model(pooled_emb)
